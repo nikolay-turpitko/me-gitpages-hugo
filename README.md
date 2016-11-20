@@ -1,2 +1,2 @@
 # me-gitpages-hugo
-Sources for Hugo to generate my personal website on gitpages.
+Sources for Hugo to generate website about me https://nikolay-turpitko.github.io.
