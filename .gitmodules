@@ -1,6 +1,6 @@
 [submodule "about-me/public"]
 	path = about-me/public
-	url = git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git
+	url = https://github.com/nikolay-turpitko/nikolay-turpitko.github.io.git
 	branch = master
 [submodule "about-me/themes/after-dark"]
 	path = about-me/themes/after-dark
