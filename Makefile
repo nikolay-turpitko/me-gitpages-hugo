@@ -10,7 +10,7 @@ all: \
 
 clean:
 	@echo "Clean"
-	@find ./about-me/public -delete
+	@find ./about-me/public -mindepth 1 ! -name .git -delete
 	@echo "Clean Done."
 
 build:
