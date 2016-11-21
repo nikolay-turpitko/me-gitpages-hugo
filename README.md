@@ -1,4 +1,4 @@
-https://travis-ci.org/nikolay-turpitko/me-gitpages-hugo.svg?branch=master
+[![Build Status](https://travis-ci.org/nikolay-turpitko/me-gitpages-hugo.svg?branch=master)](https://travis-ci.org/nikolay-turpitko/me-gitpages-hugo)
 
 # me-gitpages-hugo
 Sources for Hugo to generate website about me https://nikolay-turpitko.github.io.
