@@ -1,0 +1,47 @@
+baseurl = "https://nikolay-turpitko.github.io/"
+languageCode = "en-us"
+title = "Nikolay Turpitko, Software Developer"
+
+theme = "after-dark"
+paginate = 5
+canonifyurls = true
+buildDrafts = true
+disableRSS = true
+enableRobotsTXT = true
+googleAnalytics = ""
+SectionPagesMenu = "main"
+
+ignoreFiles = [ "README\\.md$" ]
+
+[params]
+  description = ""
+  author = "Nikolay Turpitko"
+  show_menu = true
+  powered_by = true
+
+[params.seo]
+  google_verify = ""
+  bing_verify = ""
+  yandex_verify = ""
+ 
+ [menu]
+   [[menu.main]]
+     name = "About"
+     weight = 0
+     identifier = "about"
+     url = "/"
+   [[menu.main]]
+     name = "Recent projects"
+     weight = 1
+     identifier = "recent"
+     url = "/recent/"
+   [[menu.main]]
+     name = "Full CV"
+     weight = 2
+     identifier = "full-cv"
+     url = "/full-cv/"
+   [[menu.main]]
+     name = "Download"
+     weight = 3
+     identifier = "downloads"
+     url = "/downloads/"

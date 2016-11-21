@@ -1,0 +1,4 @@
+[submodule "about-me/public"]
+	path = about-me/public
+	url = git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git
+	branch = master
