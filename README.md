@@ -10,3 +10,9 @@ Sources for Hugo to generate website about me https://nikolay-turpitko.github.io
 - http://rcoedo.com/post/hugo-static-site-generator/
 - http://www.curtismlarson.com/blog/2015/04/12/github-pages-google-domains/
 
+## Create key:
+```
+ssh-keygen -t rsa -b 4096 -C "<github-username>"
+# save to id_rsa_travis, without passphrase
+travis encrypt-file ~/id_rsa_travis --add
+```
