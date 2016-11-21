@@ -20,5 +20,6 @@ build:
 	@cd ./about-me/public && \
 		git add -A && \
 		git commit -m "Rebuild site `date --rfc-3339=seconds`" && \
-		git push origin master
+		git remote add push2 git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git || : && \
+		git push push2 master
 	@echo "Build Done."
