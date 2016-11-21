@@ -19,6 +19,6 @@ build:
 	@cp ./about-me/content/README.md ./about-me/public
 	@cd ./about-me/public && \
 		git add -A && \
-		git commit -m "Rebuild site `date`" && \
+		git commit -m "Rebuild site `date --rfc-3339=seconds`" && \
 		git push origin master
 	@echo "Build Done."
