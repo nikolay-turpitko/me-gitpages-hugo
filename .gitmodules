@@ -2,7 +2,3 @@
 	path = about-me/public
 	url = https://github.com/nikolay-turpitko/nikolay-turpitko.github.io.git
 	branch = master
-[submodule "about-me/themes/after-dark"]
-	path = about-me/themes/after-dark
-	url = https://github.com/comfusion/after-dark.git
-	branch = master
