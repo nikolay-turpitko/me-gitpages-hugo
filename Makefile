@@ -5,6 +5,7 @@
 
 all: \
 	clean \
+	generate \
 	build
 	@echo "All Done."
 
