@@ -10,8 +10,6 @@ weight = 0
 
 TODO: About me
 
-TODO: I am ~~beautiful~~ just awesome :)))
-
 [web site](http://www.nikolay.turpitko.com)
 ([alias](https://nikolay-turpitko.github.io)) |
 [LinkedIn profile](http://www.linkedin.com/in/nikolayturpitko) |
