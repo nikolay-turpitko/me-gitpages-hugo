@@ -33,12 +33,12 @@ ignoreFiles = [ "README\\.md$" ]
    [[menu.main]]
      name = "Recent projects"
      weight = 1
-     identifier = "recent"
-     url = "/recent/"
+     identifier = "recent projects"
+     url = "/recent-projects/"
    [[menu.main]]
      name = "Full CV"
      weight = 2
-     identifier = "full-cv"
+     identifier = "full cv"
      url = "/full-cv/"
    [[menu.main]]
      name = "Download"
