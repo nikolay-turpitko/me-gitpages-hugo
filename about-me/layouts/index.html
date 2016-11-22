@@ -14,6 +14,40 @@
     {{ partial "favicon" . }}
     {{ partial "critical-vendor.css" . }}
     {{ partial "critical-custom.css" . }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // http://stackoverflow.com/a/617685/987044
+        function rot(s, i) {
+            return s.replace(/[a-zA-Z]/g, function (c) {
+                return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + i) ? c : c - 26);
+            });
+        }
+        $(function() {
+            $('a[href^="mailto:"]').each(function() {
+                this.href = this.href.replace(/[^:]+?$/, function(e) {
+                    let r = rot(e.replace('[at]', '@').replace(/\[dot\]/g, '.'), 13);
+                    return r;
+                });
+                this.innerHTML = this.href.replace('mailto:', '');
+            });
+            $('form[action^="http://formspree.io/"]').each(function() {
+                this.action = this.action.replace(/[^\/]+?$/, function(e) {
+                    let r = rot(e.replace('[at]', '@').replace(/\[dot\]/g, '.'), 13);
+                    console.log(e, r);
+                    return r;
+                });
+            });
+        });
+    </script>
+    <style>
+        form > input,
+        form > textarea {
+            width: 100%;
+        }
+        form > textarea {
+            height: 5em;
+        }
+    </style>
   </head>
   <body class="hack dark main container">
     <header>
