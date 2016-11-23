@@ -54,9 +54,7 @@ generate:
 # need to push changes back to that repo.
 # But due the restrictions of travis, it have to be cloned via https, and
 # should be pushed via ssh (to be able to use ssh key, not password).
-# So, I added new remote to the repo and pushed to it. But because of different
-# remote (I suppose), head became detached. So, trying to re-attach it via
-# temproary branch.
+# So, trying to push detached head into master, providing repo's url.
 
 build:
 	@echo "Build"
@@ -65,10 +63,5 @@ build:
 	@cd ./about-me/public && \
 		git add -A && \
 		git commit -m "Rebuild site `date --rfc-3339=seconds`" && \
-		git remote add push2 git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git || : && \
-		git branch tmp && \
-		git checkout master && \
-		git merge -s recursive theirs tmp && \
-		git branch -d tmp && \
-		git push push2 master
+		git push git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git HEAD:master
 	@echo "Build Done."
