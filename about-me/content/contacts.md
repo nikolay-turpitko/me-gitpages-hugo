@@ -2,7 +2,7 @@
 title = "Contacts"
 description = ""
 type = "post"
-weight = 1
+weight = 2
 
 +++
 

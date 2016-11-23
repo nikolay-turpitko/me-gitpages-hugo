@@ -2,7 +2,7 @@
 title = "About me"
 description = ""
 type = "post"
-weight = 0
+weight = 1
 
 +++
 
