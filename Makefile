@@ -68,7 +68,7 @@ build:
 		git remote add push2 git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git || : && \
 		git branch tmp && \
 		git checkout master && \
-		git merge -s theirs tmp && \
+		git merge -s recursive theirs tmp && \
 		git branch -d tmp && \
 		git push push2 master
 	@echo "Build Done."
