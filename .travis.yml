@@ -4,9 +4,17 @@ go:
 sudo: required
 services:
     - docker
+addons:
+    apt:
+        packages:
+            - texlive-latex-base 
+            - texlive-latex-extra
+            - texlive-fonts-recommended 
+            - texlive-xetex 
+            - pandoc
 before_install:
-    - sudo apt-get -y install snapd texlive-xetex texlive-fonts-recommended texlive-latex-base texlive-latex-extra pandoc
-    - sudo snap install hugo
+    - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb
+    - sudo dpkg -i hugo_0.17-64bit.deb
     - openssl aes-256-cbc -K $encrypted_97c4de2fd153_key -iv $encrypted_97c4de2fd153_iv -in id_rsa_travis.enc -out id_rsa_travis -d
     - chmod 600 id_rsa_travis
     - eval "$(ssh-agent -s)" && ssh-add id_rsa_travis
