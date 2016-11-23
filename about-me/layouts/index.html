@@ -30,7 +30,7 @@
                 });
                 this.innerHTML = this.href.replace('mailto:', '');
             });
-            $('form[action^="http://formspree.io/"]').each(function() {
+            $('form[action^="https://formspree.io/"]').each(function() {
                 this.action = this.action.replace(/[^\/]+?$/, function(e) {
                     let r = rot(e.replace('[at]', '@').replace(/\[dot\]/g, '.'), 13);
                     console.log(e, r);
