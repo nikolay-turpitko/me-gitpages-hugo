@@ -60,7 +60,8 @@ build:
 	@echo "Build"
 	@cd ./about-me && hugo
 	@cp ./about-me/content/README.md ./about-me/public
-	@cd ./about-me/public && \
+	@git submodule update --rebase && \
+		cd ./about-me/public && \
 		git add -A && \
 		git commit -m "Rebuild site `date --rfc-3339=seconds`" && \
 		git push git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git HEAD:master
