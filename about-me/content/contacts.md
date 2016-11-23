@@ -8,7 +8,7 @@ weight = 2
 
 [email me](mailto:avxbynl[at]ghecvgxb[dot]pbz)
 
-<form method="POST" action="http://formspree.io/avxbynl[at]ghecvgxb[dot]pbz">
+<form method="POST" action="https://formspree.io/avxbynl[at]ghecvgxb[dot]pbz">
     <input type="hidden" name="_subject" value="[From form on my site]" />
     <input type="hidden" name="_format" value="plain" />
     <input type="text" name="_gotcha" style="display:none" />
