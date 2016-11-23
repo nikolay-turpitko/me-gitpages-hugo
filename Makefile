@@ -64,5 +64,5 @@ build:
 		cd ./about-me/public && \
 		git add -A && \
 		git commit -m "Rebuild site `date --rfc-3339=seconds`" && \
-		git push git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git HEAD:master
+		git push -f git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git HEAD:master
 	@echo "Build Done."
