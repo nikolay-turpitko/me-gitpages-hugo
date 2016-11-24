@@ -39,9 +39,7 @@ before_install:
         fi
       fi
       cd ..
-script:
-    - export PATH="nim-$BRANCH/bin${PATH:+:$PATH}" && echo $PATH && ls -l nim-master/bin && which nim && nim -v
-    - make PATH="nim-$BRANCH/bin${PATH:+:$PATH}"
+script: export PATH="$PWD/nim-$BRANCH/bin${PATH:+:$PATH}" && make
 cache:
     directories:
         - nim-master
