@@ -41,6 +41,7 @@ before_install:
       cd ..
 before_script:
     - export PATH="nim-$BRANCH/bin${PATH:+:$PATH}"
+script: make
 cache:
   directories:
     - nim-master
