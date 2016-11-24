@@ -1,7 +1,7 @@
 language: c
 sudo: required
 env:
-    - BRANCH=v0.13.0
+    - BRANCH=master
 before_install:
     - sudo apt-get -q update
     - sudo apt-get -y install
@@ -43,4 +43,4 @@ before_script:
     - export PATH="nim-$BRANCH/bin${PATH:+:$PATH}"
 cache:
   directories:
-    - nim-v0.12.0
+    - nim-master
