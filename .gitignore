@@ -1,1 +1,3 @@
 about-me/static/doc
+about-me/static/*.zip
+about-me/static/*.tar.gz

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+  <head>
+    {{ .Hugo.Generator }}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    {{ with .Description }}
+      <meta name="description" content="{{ . }}">
+    {{ end }}
+    {{ if .RSSLink }}
+      <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    {{ end }}
+    <link rel="canonical" href="{{ .Permalink }}">
+    {{ if (isset .Params "prev") }}
+      <link rel="prev" href="{{ .Params.prev }}">
+    {{ end }}
+    {{ if (isset .Params "next") }}
+      <link rel="next" href="{{ .Params.next }}">
+    {{ end }}
+    {{ partial "favicon" . }}
+    {{ partial "critical-vendor.css" }}
+    {{ partial "critical-custom.css" }}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // http://stackoverflow.com/a/617685/987044
+        function rot(s, i) {
+            return s.replace(/[a-zA-Z]/g, function (c) {
+                return String.fromCharCode((c <= 'Z' ? 90 : 122) >= (c = c.charCodeAt(0) + i) ? c : c - 26);
+            });
+        }
+        $(function() {
+            $('a[href^="mailto:"]').each(function() {
+                this.href = this.href.replace(/[^:]+?$/, function(e) {
+                    let r = rot(e.replace('[at]', '@').replace(/\[dot\]/g, '.'), 13);
+                    return r;
+                });
+                this.innerHTML = this.href.replace('mailto:', '');
+            });
+            $('form[action^="https://formspree.io/"]').each(function() {
+                this.action = this.action.replace(/[^\/]+?$/, function(e) {
+                    let r = rot(e.replace('[at]', '@').replace(/\[dot\]/g, '.'), 13);
+                    console.log(e, r);
+                    return r;
+                });
+            });
+        });
+    </script>
+  </head>
+  <body class="hack dark main container">
+    <header>{{ block "header" . }}{{ end }}</header>
+    <main>{{ block "main" . }}{{ end }}</main>
+    <footer>{{ block "footer" . }}{{ end }}</footer>
+    {{ template "_internal/google_analytics_async.html" . }}
+  </body>
+</html>

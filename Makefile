@@ -16,7 +16,7 @@ clean:
 	@echo "Clean Done."
 
 generate:
-	@echo "docerate static content"
+	@echo "Generate static content"
 	@mkdir -p ./about-me/static/doc
 	@sed '/^+++$$/,/^+++$$/d' ./about-me/content/full\ cv/index.md | \
 		sed '/./,$$!d' | \
@@ -47,7 +47,13 @@ generate:
 		-V fontsize="10pt" \
 		-o ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.pdf \
 		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.md
-	@echo "docerate static content Done."
+	@find ./about-me/static -name "*.pdf" -or -name "*.md" | \
+		tar --transform 's:^.*/::' \
+		-cvzf ./about-me/static/Nikolay_Turpitko_Software_Developer_Golang.tar.gz \
+		--files-from=/dev/stdin
+	@find ./about-me/static -name "*.pdf" -or -name "*.md" | \
+		zip ./about-me/static/Nikolay_Turpitko_Software_Developer_Golang -j@
+	@echo "Generate static content Done."
 
 # During the build, code is generated to ./about-me/public folder, which is
 # a submodule, mapped to github pages project. So, after site generation we
