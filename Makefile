@@ -35,7 +35,7 @@ generate:
 		./tools/bin/decryptemail | \
 		cat -s > ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md
 	@pandoc -s -S \
-		-f markdown_github \
+		-f markdown \
 		-V papersize="a4" \
 		-V margin-left="2cm" \
 		-V margin-right="2cm" \
@@ -51,7 +51,7 @@ generate:
 		sed '/^+++$$/,/^+++$$/d' \
 		> ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.md
 	@pandoc -s -S \
-		-f markdown_github \
+		-f markdown \
 		-V papersize="a4" \
 		-V margin-left="2cm" \
 		-V margin-right="2cm" \

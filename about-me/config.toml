@@ -15,6 +15,9 @@ SectionPagesMenu = "main"
 
 ignoreFiles = [ "README\\.md$" ]
 
+[blackfriday]
+  fractions = false
+
 [params]
   description = ""
   author = "Nikolay Turpitko"
