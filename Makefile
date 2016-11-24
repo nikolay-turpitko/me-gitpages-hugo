@@ -23,8 +23,8 @@ clean:
 tools:
 	@echo "Build Tools"
 	@mkdir -p ./tools/bin
-	@nim c -o:"./bin/decryptemail" ./tools/decryptemail.nim
-	@nim c -o:"./bin/obfuscateemail" ./tools/obfuscateemail.nim
+	@cd ./tools && nim c -o:"./bin/decryptemail" decryptemail.nim
+	@cd ./tools && nim c -o:"./bin/obfuscateemail" obfuscateemail.nim
 	@echo "Build Tools Done."
 
 generate:
