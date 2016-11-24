@@ -3,7 +3,8 @@ sudo: required
 services:
     - docker
 before_install:
-    - sudo apt-get update
+    - sudo add-apt-repository universe
+    - sudo apt-get -q update
     - sudo apt-get -y install
         texlive-latex-base
         texlive-latex-extra
