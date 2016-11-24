@@ -40,8 +40,8 @@ before_install:
       fi
       cd ..
 script:
-    - export PATH="nim-$BRANCH/bin${PATH:+:$PATH}" && echo $PATH && ls -l nim-master/bin && which nim
-    - export PATH="nim-$BRANCH/bin${PATH:+:$PATH}" && make
+    - export PATH="nim-$BRANCH/bin${PATH:+:$PATH}" && echo $PATH && ls -l nim-master/bin && which nim && nim -v
+    - make PATH="nim-$BRANCH/bin${PATH:+:$PATH}"
 cache:
     directories:
         - nim-master
