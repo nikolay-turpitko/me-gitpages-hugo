@@ -1,25 +1,38 @@
 .PHONY: \
 	all \
 	clean \
+	tools \
+	generate \
 	build
 
 all: \
 	clean \
+	tools \
 	generate \
 	build
 	@echo "All Done."
 
 clean:
 	@echo "Clean"
-	@find ./about-me/public -mindepth 1 ! -name .git -delete
+	@find ./about-me/public -mindepth 1 ! -name ".git" -delete
 	@rm -rf ./about-me/static/doc
+	@find ./about-me/static -maxdepth 1 -name "*.zip" -delete -or -name "*.tar.gz" -delete
+	@find ./tools -mindepth 1 ! -name "*.nim" -delete
 	@echo "Clean Done."
+
+tools:
+	@echo "Build Tools"
+	@mkdir -p ./tools/bin
+	@nim c -o:"./bin/decryptemail" ./tools/decryptemail.nim
+	@nim c -o:"./bin/obfuscateemail" ./tools/obfuscateemail.nim
+	@echo "Build Tools Done."
 
 generate:
 	@echo "Generate static content"
 	@mkdir -p ./about-me/static/doc
 	@sed '/^+++$$/,/^+++$$/d' ./about-me/content/full\ cv/index.md | \
 		sed '/./,$$!d' | \
+		./tools/bin/decryptemail | \
 		cat -s > ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md
 	@pandoc -s -S \
 		-f markdown_github \
@@ -53,6 +66,11 @@ generate:
 		--files-from=/dev/stdin
 	@find ./about-me/static -name "*.pdf" -or -name "*.md" | \
 		zip ./about-me/static/Nikolay_Turpitko_Software_Developer_Golang -j@
+	@cat ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md | \
+		./tools/bin/obfuscateemail > \
+		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md.tmp && \
+		mv ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md.tmp \
+		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md
 	@echo "Generate static content Done."
 
 # During the build, code is generated to ./about-me/public folder, which is
@@ -60,7 +78,7 @@ generate:
 # need to push changes back to that repo.
 # But due the restrictions of travis, it have to be cloned via https, and
 # should be pushed via ssh (to be able to use ssh key, not password).
-# So, trying to push detached head into master, providing repo's url.
+# So, push detached head into master, providing repo's url.
 
 build:
 	@echo "Build"
