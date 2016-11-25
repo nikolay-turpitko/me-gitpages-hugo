@@ -1,3 +1,6 @@
+# This program gets text from stdin and passes it to stdout, replacing all
+# "mailto:" links in markdown notation to plain (not obfuscated) representation.
+
 import nre, strutils, sequtils
 
 proc rot13(c: char): char =
