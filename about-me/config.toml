@@ -4,7 +4,7 @@ title = "Nikolay Turpitko, Software Developer"
 
 theme = "after-dark"
 paginate = 5
-canonifyurls = true
+canonifyurls = false
 buildDrafts = true
 disableRSS = true
 disable404 = true

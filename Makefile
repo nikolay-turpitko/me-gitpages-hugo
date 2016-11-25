@@ -37,10 +37,7 @@ generate:
 	@pandoc -s -S \
 		-f markdown \
 		-V papersize="a4" \
-		-V margin-left="2cm" \
-		-V margin-right="2cm" \
-		-V margin-top="2cm" \
-		-V margin-bottom="2cm" \
+		-V geometry:margin=1cm \
 		-V fontsize="10pt" \
 		-o ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.pdf \
 		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md
@@ -53,10 +50,7 @@ generate:
 	@pandoc -s -S \
 		-f markdown \
 		-V papersize="a4" \
-		-V margin-left="2cm" \
-		-V margin-right="2cm" \
-		-V margin-top="2cm" \
-		-V margin-bottom="2cm" \
+		-V geometry:margin=1cm \
 		-V fontsize="10pt" \
 		-o ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.pdf \
 		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.md
