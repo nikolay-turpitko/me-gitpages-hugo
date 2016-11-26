@@ -79,7 +79,7 @@ build:
 	@echo "Build"
 	@cd ./about-me && hugo
 	@cp ./about-me/content/README.md ./about-me/public
-	@git submodule update --rebase && \
+	@[ -n "$$TRAVIS" ] && git submodule update --rebase && \
 		cd ./about-me/public && \
 		git add -A && \
 		git commit -m "Rebuild site `date --rfc-3339=seconds`" && \
