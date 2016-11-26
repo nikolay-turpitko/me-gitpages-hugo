@@ -35,3 +35,10 @@ is still probable, they may attempt to try parse all links as text files. Links
 in the markdown file obfuscated less strong, than in html, but still somewhat
 better than not at all. I suppose, it not going to work, if I ask HR to decrypt
 my email from rot13...
+
+## Note
+
+Never commit/push subomdule in ./about-me/public from local repo.
+Otherwise you'll have to commit/push superproject as well. Let TravisCI do this
+job. Better make a branch in the submodule for local experiments and discard it
+before push main project.
