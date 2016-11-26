@@ -62,7 +62,7 @@ Golang Software Developer, Independent Contractor
 09/2009 -- 03/2012
 
 :   __Luxoft, Moscow (http://www.luxoft.com/)__  
-    __Senior Java Developera__  
+    __Senior Java Developer__  
     _Custodian system_  
     `Java, J2EE, JEE, Java Connector Architecture, Swing, Spring Framework,
      Tibco Rendezvous (via Java API), JDBC, SQL (RDBMS MS SQL), Apache Maven,

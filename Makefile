@@ -3,7 +3,8 @@
 	clean \
 	tools \
 	generate \
-	build
+	build \
+	serve
 
 all: \
 	clean \
@@ -84,3 +85,8 @@ build:
 		git commit -m "Rebuild site `date --rfc-3339=seconds`" && \
 		git push -f git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git HEAD:master
 	@echo "Build Done."
+
+serve: clean tools generate
+	@echo "Run Hugo"
+	@cd ./about-me && hugo server
+	@echo "Run Hugo Done."
