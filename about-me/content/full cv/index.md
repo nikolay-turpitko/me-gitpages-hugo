@@ -13,7 +13,7 @@ description = ""
 
 [+79267904397](phone:+79267904397)
 
-http://www.nikolay.turpitko.com
+<http://www.nikolay.turpitko.com>
 
 
 ### OBJECTIVE
@@ -37,7 +37,7 @@ Golang Software Developer, Independent Contractor
 
 12/2014 -- Present
 
-:   __Let's Rock Today!, Moscow/Barnaul (http://www.letsrock.today)__  
+:   __Let's Rock Today!, Moscow/Barnaul (<http://www.letsrock.today>)__  
     __Co-founder, Software Developer and Architect__  
     _Hybrid (web/Android) application for search, browse and subscribe to
      entertainment events (not quite like seatgeak.com)_  
@@ -98,7 +98,7 @@ Golang Software Developer, Independent Contractor
 
 03/2012 -- 12/2014
 
-:   __UBS ("Manpower CIS" contractor), Moscow (http://www.ubs.com/ru/en.html)__  
+:   __UBS ("Manpower CIS" contractor), Moscow (<http://www.ubs.com/ru/en.html>)__  
     __Senior Programmer-Analyst__  
     _Equity trading and settlement system_  
     `Java, J2EE, JEE, JDBC, SQL (RDBMS MS SQL), Apache Ant, Apache Maven,
@@ -117,7 +117,7 @@ Golang Software Developer, Independent Contractor
 
 09/2009 -- 03/2012
 
-:   __Luxoft, Moscow (http://www.luxoft.com/)__  
+:   __Luxoft, Moscow (<http://www.luxoft.com/>)__  
     __Senior Java Developer__  
     _Custodian system_  
     `Java, J2EE, JEE, Java Connector Architecture, Swing, Spring Framework,
@@ -136,7 +136,7 @@ Golang Software Developer, Independent Contractor
 
 12/2008 -- 09/2009
 
-:   __Sibirenergo-Billing, Novosibirsk (http://www.billing.sibirenergo.ru/)__  
+:   __Sibirenergo-Billing, Novosibirsk (<http://www.billing.sibirenergo.ru/>)__  
     __Senior Web Developer__  
     _Unified Payment System_  
     `Java, Hibernate, Criteria API, Spring, web services, Axis2, J2EE, JAX-WS,
@@ -161,7 +161,7 @@ Golang Software Developer, Independent Contractor
 
 04/2008 -- 12/2008
 
-:   __S7 IT, Novosibirsk (http://www.s7.ru/en/index.html)__  
+:   __S7 IT, Novosibirsk (<http://www.s7.ru/en/index.html>)__  
     __Senior Java Developer__  
     _Web application for ticket agents and retailers_  
     `Java, J2EE, EJB3, JSF, Facelets, JBoss Seam, RichFaces, Ajax, Javascript,
@@ -177,7 +177,7 @@ Golang Software Developer, Independent Contractor
 
 11/2006 -- 03/2008
 
-:   __Luxoft, Moscow (http://www.luxoft.com/)__  
+:   __Luxoft, Moscow (<http://www.luxoft.com/>)__  
     __Java Developer, Senior Java Developer__  
     _Dell's global order fulfilment system_--
     `Java, J2EE, JSP, JSF, JMS, JDBC, SQL (RDBMS Oracle), XML, web services,
@@ -201,7 +201,7 @@ Golang Software Developer, Independent Contractor
 
 05/2005 -- 11/2006
 
-:   __Applied Technologies, Chelyabinsk (http://www.appliedtech.ru/?lang=en&amp;page=home)__  
+:   __Applied Technologies, Chelyabinsk (<http://www.appliedtech.ru/?lang=en&amp;page=home>)__  
     __Java Developer__  
     _Thin client for the DB2 Query Management Facility Tool_  
     `Java, JSP, JSF, HTML, CSS, Javascript`
@@ -213,7 +213,7 @@ Golang Software Developer, Independent Contractor
 
 06/2003 -- 04/2005
 
-:   __Toll station, Sibirtelecom &amp; Altaytelecom, Barnaul (http://www.altai.sibirtelecom.ru/)__  
+:   __Toll station, Sibirtelecom &amp; Altaytelecom, Barnaul (<http://www.altai.sibirtelecom.ru/>)__  
     __Engineer of electronics__  
     _Several web-applications for telephone exchange engineers_
     `C#, ASP.NET, ADO.NET, .NET Framework. HTML, DHTML, CSS, SQL (RDBMS Oracle,
@@ -229,7 +229,7 @@ Golang Software Developer, Independent Contractor
 
 05/2000 -- 06/2003
 
-:   __Prominform, Miass (http://www.prominform.ru/index.php?ktg=1&amp;lng=1)__  
+:   __Prominform, Miass (<http://www.prominform.ru/index.php?ktg=1&amp;lng=1>)__  
     __Software Developer__  
     _Development software for Telephone Channel Analyzer_  
     `C++, STL, ATL, WTL, COM, OLE-automation, DirectSound, Win32 API, DDK,
@@ -248,16 +248,16 @@ Golang Software Developer, Independent Contractor
 
 09/1994 -- 06/1999
 
-:   __Chelyabinsk State University, Chelyabinsk (http://www.csu.ru/en)__  
+:   __Chelyabinsk State University, Chelyabinsk (<http://www.csu.ru/en>)__  
     __Specialist degree ([5 years degree](https://en.wikipedia.org/wiki/Specialist_degree))__  
     _Physics, Radiophysics and electronics_  
     `Diploma number: ABC 0245806`
 
 ## CERTIFICATIONS
 
-- [Oracle Certified Master, Java EE 5 Enterprise Architect](/cert/OCM-JEE5.pdf)
-- [Sun Certified Web Component Developer for J2EE 1.4](/cert/SCWCD.pdf)
-- [Sun Certified Programmer for the Java 2 Platform, Standard Edition 5.0](/cert/SCP.pdf)
+- [Oracle Certified Master, Java EE 5 Enterprise Architect](http://www.nikolay.turpitko.com/cert/OCM-JEE5.pdf)
+- [Sun Certified Web Component Developer for J2EE 1.4](http://www.nikolay.turpitko.com/cert/SCWCD.pdf)
+- [Sun Certified Programmer for the Java 2 Platform, Standard Edition 5.0](http://www.nikolay.turpitko.com/cert/SCP.pdf)
 
 ## HUMAN LANGUAGES
 
