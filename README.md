@@ -11,6 +11,7 @@ Sources for Hugo to generate website about me https://nikolay-turpitko.github.io
 - http://themes.gohugo.io/after-dark/
 - http://rcoedo.com/post/hugo-static-site-generator/
 - http://www.curtismlarson.com/blog/2015/04/12/github-pages-google-domains/
+- https://help.github.com/articles/setting-up-a-custom-subdomain/
 
 ## Create key
 

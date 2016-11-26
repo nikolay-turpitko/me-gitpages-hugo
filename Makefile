@@ -55,11 +55,11 @@ generate:
 		-V fontsize="10pt" \
 		-o ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.pdf \
 		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.md
-	@find ./about-me/static -name "*.pdf" -or -name "*.md" | \
+	@find ./about-me/static ! -path "**/cert/**" -name "*.pdf" -or -name "*.md" | \
 		tar --transform 's:^.*/::' \
 		-cvzf ./about-me/static/Nikolay_Turpitko_Software_Developer_Golang.tar.gz \
 		--files-from=/dev/stdin
-	@find ./about-me/static -name "*.pdf" -or -name "*.md" | \
+	@find ./about-me/static ! -path "**/cert/**" -name "*.pdf" -or -name "*.md" | \
 		zip ./about-me/static/Nikolay_Turpitko_Software_Developer_Golang -j@
 	@cat ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md | \
 		./tools/bin/obfuscateemail > \
@@ -79,11 +79,15 @@ build:
 	@echo "Build"
 	@cd ./about-me && hugo
 	@cp ./about-me/content/README.md ./about-me/public
-	@[ -n "$$TRAVIS" ] && git submodule update --rebase && \
+	@if [ -n "$$TRAVIS" ]; then \
+		git submodule update --rebase && \
 		cd ./about-me/public && \
 		git add -A && \
 		git commit -m "Rebuild site `date --rfc-3339=seconds`" && \
-		git push -f git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git HEAD:master
+		git push -f git@github.com:nikolay-turpitko/nikolay-turpitko.github.io.git HEAD:master; \
+	else \
+		echo "WARN: Make executed locally, no subrepo push performed."; \
+	fi
 	@echo "Build Done."
 
 serve: clean tools generate

@@ -19,3 +19,15 @@ description = ""
 - [All above in one archive (tar.gz)](/Nikolay_Turpitko_Software_Developer_Golang.tar.gz)
 
 - [All above in one archive (zip)](/Nikolay_Turpitko_Software_Developer_Golang.zip)
+
+---
+
+- [Certificate: OCM, Java EE 5 Enterprise Architect (pdf)](/cert/OCM-JEE5.pdf)
+
+- [Certificate: SCWCD, Java EE 1.4 (pdf)](/cert/SCWCD.pdf)
+
+- [Certificate: SCP, Java SE 5.0 (pdf)](/cert/SCP.pdf)
+
+- [Certificates: all in one archive (tar.gz)](/cert/Nikolay_Turpitko_Software_Developer_Java_Cert.tar.gz)
+
+- [Certificates: all in one archive (zip)](/cert/Nikolay_Turpitko_Software_Developer_Java_Cert.zip)
