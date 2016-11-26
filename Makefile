@@ -43,6 +43,7 @@ generate:
 		-V papersize="a4" \
 		-V geometry:margin=1.5cm \
 		-V fontsize="10pt" \
+		-V colorlinks=true \
 		-o ./about-me/static/doc/$(prefix)_CV.pdf \
 		./about-me/static/doc/$(prefix)_CV.md
 	@grep ./about-me/content/recent\ projects/* -PH -e '^weight\s*=\s*\d+$$' | \
@@ -59,6 +60,7 @@ generate:
 		-V papersize="a4" \
 		-V geometry:margin=1.5cm \
 		-V fontsize="10pt" \
+		-V colorlinks=true \
 		-o ./about-me/static/doc/$(prefix)_Recent_Projects.pdf \
 		./about-me/static/doc/$(prefix)_Recent_Projects.md
 	@find ./about-me/static ! -path "**/cert/**" -name "*.pdf" -or -name "*.md" | \
