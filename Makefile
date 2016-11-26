@@ -28,44 +28,50 @@ tools:
 	@cd ./tools && nim c -o:"./bin/obfuscateemail" obfuscateemail.nim
 	@echo "Build Tools Done."
 
+prefix="Nikolay_Turpitko_Software_Developer_Golang"
+
 generate:
 	@echo "Generate static content"
 	@mkdir -p ./about-me/static/doc
-	@sed '/^+++$$/,/^+++$$/d' ./about-me/content/full\ cv/index.md | \
-		sed '/./,$$!d' | \
+	@sed -e '/^+++$$/,/^+++$$/d' \
+		 -e '/./,$$!d' \
+		 ./about-me/content/full\ cv/index.md | \
 		./tools/bin/decryptemail | \
-		cat -s > ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md
+		cat -s > ./about-me/static/doc/$(prefix)_CV.md
 	@pandoc -s -S \
 		-f markdown \
 		-V papersize="a4" \
-		-V geometry:margin=1cm \
+		-V geometry:margin=1.5cm \
 		-V fontsize="10pt" \
-		-o ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.pdf \
-		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md
-	@grep ./about-me/content/recent\ projects/* -EH -e "^weight.*=.*[1..0]+$$" | \
+		-o ./about-me/static/doc/$(prefix)_CV.pdf \
+		./about-me/static/doc/$(prefix)_CV.md
+	@grep ./about-me/content/recent\ projects/* -PH -e '^weight\s*=\s*\d+$$' | \
 		sort -k 4b | \
 		cut -d: -f1 | \
-		xargs -r -I'{}' cat '{}' | \
-		sed '/^+++$$/,/^+++$$/d' \
-		> ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.md
+		xargs -r -I'{}' sed \
+		  -e '/^+++$$/,/^+++$$/d' \
+		  -e '/./,$$!d' \
+		  -e '$$s/$$/\n/' \
+		  -s '{}' | \
+		cat -s > ./about-me/static/doc/$(prefix)_Recent_Projects.md
 	@pandoc -s -S \
 		-f markdown \
 		-V papersize="a4" \
-		-V geometry:margin=1cm \
+		-V geometry:margin=1.5cm \
 		-V fontsize="10pt" \
-		-o ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.pdf \
-		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Recent_Projects.md
+		-o ./about-me/static/doc/$(prefix)_Recent_Projects.pdf \
+		./about-me/static/doc/$(prefix)_Recent_Projects.md
 	@find ./about-me/static ! -path "**/cert/**" -name "*.pdf" -or -name "*.md" | \
 		tar --transform 's:^.*/::' \
-		-cvzf ./about-me/static/Nikolay_Turpitko_Software_Developer_Golang.tar.gz \
+		-cvzf ./about-me/static/$(prefix).tar.gz \
 		--files-from=/dev/stdin
 	@find ./about-me/static ! -path "**/cert/**" -name "*.pdf" -or -name "*.md" | \
-		zip ./about-me/static/Nikolay_Turpitko_Software_Developer_Golang -j@
-	@cat ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md | \
+		zip ./about-me/static/$(prefix) -j@
+	@cat ./about-me/static/doc/$(prefix)_CV.md | \
 		./tools/bin/obfuscateemail > \
-		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md.tmp && \
-		mv ./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md.tmp \
-		./about-me/static/doc/Nikolay_Turpitko_Software_Developer_Golang_CV.md
+		./about-me/static/doc/$(prefix)_CV.md.tmp && \
+		mv ./about-me/static/doc/$(prefix)_CV.md.tmp \
+		./about-me/static/doc/$(prefix)_CV.md
 	@echo "Generate static content Done."
 
 # During the build, code is generated to ./about-me/public folder, which is
