@@ -1,6 +1,5 @@
 +++
 title = "About me"
-description = ""
 type = "post"
 weight = 1
 

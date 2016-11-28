@@ -1,26 +1,13 @@
-+++
-description = ""
-
-+++
 
 # NIKOLAY TURPITKO
 
-## Software Developer, Independent Contractor
+## Golang Software Developer, Independent Contractor
 
-### CONTACTS
-
-[email me](mailto:avxbynl[at]ghecvgxb[dot]pbz) (e-mail / Google Hangouts)
-
-[+79267904397](phone:+79267904397)
-
+[[my-name]@[my-surname].com](mailto:avxbynl[at]ghecvgxb[dot]pbz) |
+[+79267904397](phone:+79267904397) |
 <http://www.nikolay.turpitko.com>
 
-
-### OBJECTIVE
-
-Golang Software Developer, Independent Contractor
-
-### TECHNICAL SUMMARY
+### SUMMARY
 
 - Go programming language: __about 3 years__.
 - HTML, CSS, JavaScript: __more than 7 years__.
@@ -32,6 +19,7 @@ Golang Software Developer, Independent Contractor
 - Experience in the enterprise web-development area: __more than 10 years__.
 - Misc -- Git, SVN, Ubuntu/CentOS Linux, bash, vim, tmate, make, Docker,
   Vagrant, Packer: __confident user__.
+- Human languages: __English (intermediate), Russian (native)__.
 
 ### EMPLOYMENT HISTORY
 
@@ -231,18 +219,35 @@ Golang Software Developer, Independent Contractor
 
 :   __Prominform, Miass (<http://www.prominform.ru/index.php?ktg=1&amp;lng=1>)__  
     __Software Developer__  
-    _Development software for Telephone Channel Analyzer_  
+    _Development software for Telephone Line Analyzer_  
     `C++, STL, ATL, WTL, COM, OLE-automation, DirectSound, Win32 API, DDK,
     NuMega SoftIce DriverStudio, x86 Assembler, ADSP2181 Assembler,
     Atmel ST90S1200 Assembler, Microsoft Visual Studio 6`
 
-    Developed embedded programs for telecom device using assembler languages.
-    Developed (Ring 0) device drivers for Windows 98 (vxd) and NT2000 (sys)
-    using C++, x86 assembler, Microsoft DDK and NuMega SoftIce DriverStudio.
-    Developed dll libraries to provide API for upper-level programs. Developed
-    Windows-based GUI application to work with device, which was able to display,
-    play and record in real time all data gathered from analyzer (such as sound
-    and signaling information from two PCM-30 trunks).
+    Developed full stack of programs for telephone line analyzer:
+
+    - embedded program for digital signal processor,
+    - embedded program for Atmel AVR 8-bit microcontroller,
+    - ring 0 device drivers for Windows 98 (vxd) and NT2000 (sys),
+    - shared (dll) libraries to provide API for upper-level programs,
+    - GUI application with OLE/COM automation interface for scripting,
+    - several example automation scripts.
+    
+    Device had two microcontrollers and several specialized controllers (like
+    MT9075 E1 Line Interface Unit etc). Digital signalling processor gathered
+    information from various sensors and controllers, preprocessed it, performed
+    some measurements and sent all information into PC. Device was designed in
+    two different form factors - as an ISA card and external box, connected via
+    parallel port in EPP mode. Device driver created several shared memry
+    buffers within application's process and filled them with data from device
+    in real time. GUI application was able to display, analyze, play (using
+    computer's sound device or telephone line analyzer's embedded speaker)
+    and record all the data gathered from analyzer in the real time.
+    Data included sound and signaling information from two PCM-30 trunks,
+    several ADC channels, etc. Automation scripts were able to start/stop
+    data recording on different events (or combination of them) evaluated
+    by the mine program from incoming data (like detected dual tone digit or
+    series of digits, some voltage threshold on some input, etc).
 
 ## EDUCATION
 
@@ -259,14 +264,9 @@ Golang Software Developer, Independent Contractor
 - [Sun Certified Web Component Developer for J2EE 1.4](http://www.nikolay.turpitko.com/cert/SCWCD.pdf)
 - [Sun Certified Programmer for the Java 2 Platform, Standard Edition 5.0](http://www.nikolay.turpitko.com/cert/SCP.pdf)
 
-## HUMAN LANGUAGES
-
-- English: intermediate
-- Russian: native speaker
-
 ## ADDITIONAL INFORMATION
 
-- Remote positions are preferable
-- Business trips are possible
-- Relocation is possible
-- Document change date: __11/26/2016__
+- Remote positions are preferable.
+- Business trips are possible.
+- Relocation is possible.
+- Document updated: __{{% updated %}}__.

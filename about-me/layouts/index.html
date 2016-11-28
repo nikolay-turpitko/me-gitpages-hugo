@@ -23,6 +23,7 @@
             });
         }
         $(function() {
+            $(".jsonly").css("display", "");
             $('a[href^="mailto:"]').each(function() {
                 this.href = this.href.replace(/[^:]+?$/, function(e) {
                     let r = rot(e.replace('[at]', '@').replace(/\[dot\]/g, '.'), 13);

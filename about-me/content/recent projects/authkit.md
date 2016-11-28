@@ -1,14 +1,12 @@
 +++
 title = "authkit"
-description = ""
-weight = 1
+weight = 2
 
 +++
 
 ## authkit
 
-- line 1
+- OAuth2
+- Hydra
+- Echo
 
-- line 2
-
-- line 3

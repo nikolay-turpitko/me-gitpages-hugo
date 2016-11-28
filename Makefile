@@ -35,15 +35,20 @@ generate:
 	@mkdir -p ./about-me/static/doc
 	@sed -e '/^+++$$/,/^+++$$/d' \
 		 -e '/./,$$!d' \
+		 -e "s/{{% updated %}}/$$(date -I)/" \
 		 ./about-me/content/full\ cv/index.md | \
 		./tools/bin/decryptemail | \
 		cat -s > ./about-me/static/doc/$(prefix)_CV.md
 	@pandoc -s -S \
 		-f markdown \
+		-V documentclass="paper" \
 		-V papersize="a4" \
 		-V geometry:margin=1.5cm \
 		-V fontsize="10pt" \
 		-V colorlinks=true \
+		-V title-meta="Full CV" \
+		-V author-meta="Nikolay Turpitko" \
+		--reference-links \
 		-o ./about-me/static/doc/$(prefix)_CV.pdf \
 		./about-me/static/doc/$(prefix)_CV.md
 	@grep ./about-me/content/recent\ projects/* -PH -e '^weight\s*=\s*\d+$$' | \
@@ -57,10 +62,13 @@ generate:
 		cat -s > ./about-me/static/doc/$(prefix)_Recent_Projects.md
 	@pandoc -s -S \
 		-f markdown \
+		-V documentclass="paper" \
 		-V papersize="a4" \
 		-V geometry:margin=1.5cm \
 		-V fontsize="10pt" \
 		-V colorlinks=true \
+		-V title-meta="Recent projects" \
+		-V author-meta="Nikolay Turpitko" \
 		-o ./about-me/static/doc/$(prefix)_Recent_Projects.pdf \
 		./about-me/static/doc/$(prefix)_Recent_Projects.md
 	@find ./about-me/static ! -path "**/cert/**" -name "*.pdf" -or -name "*.md" | \
