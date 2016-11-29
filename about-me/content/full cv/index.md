@@ -4,7 +4,7 @@
 ## Golang Software Developer, Independent Contractor
 
 [[my-name]@[my-surname].com](mailto:avxbynl[at]ghecvgxb[dot]pbz) |
-[+79267904397](phone:+79267904397) |
+[+79267904397](tel:+79267904397) |
 <http://www.nikolay.turpitko.com>
 
 ### SUMMARY

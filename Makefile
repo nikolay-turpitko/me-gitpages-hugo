@@ -48,7 +48,7 @@ generate:
 		-V colorlinks=true \
 		-V title-meta="Full CV" \
 		-V author-meta="Nikolay Turpitko" \
-		--reference-links \
+		-H ./templ/cv-header.inc \
 		-o ./about-me/static/doc/$(prefix)_CV.pdf \
 		./about-me/static/doc/$(prefix)_CV.md
 	@grep ./about-me/content/recent\ projects/* -PH -e '^weight\s*=\s*\d+$$' | \
