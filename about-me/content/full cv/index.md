@@ -46,7 +46,7 @@
 
 :   __Taxi Moment (freelancer), remote (<http://taximoment.ru/>)__  
     __JavaScript and Go developer, freelancer__  
-    _Web and Android app to order taxi_  
+    _Web and Android app to book a taxi cab in Moscow_  
     `JavaScript, jQuery, Dojo, Apache Cordova, Java, Go, Google App Engine`
 
     In parallel with my permanent emplpyment in UBS (via Manpower), I periodically
