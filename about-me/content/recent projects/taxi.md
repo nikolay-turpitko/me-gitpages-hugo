@@ -11,8 +11,8 @@ Android application for booking taxi cabs in Moscow.
 
 I implemented:
 
-- [web/mobile app for booking taxi cabs](#web-android-ios-app-with-apache-cordova-jquery-and-dojo),
-- [back-end service for this web/mobile app](#server-module-for-client-auth-and-update-order-status-go-google-app-engine),
+- web/mobile app for booking taxi cabs,
+- back-end service for this web/mobile app,
 - prototype of mobile app for drivers (didn't make it into production).
 
 ### Web/Android/iOS app with Apache Cordova, jQuery and Dojo

@@ -67,6 +67,7 @@ generate:
 		-V geometry:margin=1.5cm \
 		-V fontsize="10pt" \
 		-V colorlinks=true \
+		-V links-as-notes=true \
 		-V title-meta="Recent projects" \
 		-V author-meta="Nikolay Turpitko" \
 		-o ./about-me/static/doc/$(prefix)_Recent_Projects.pdf \
