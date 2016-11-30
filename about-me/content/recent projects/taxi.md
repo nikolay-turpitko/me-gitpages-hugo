@@ -4,7 +4,9 @@ weight = 4
 
 +++
 
-## Taxi Moment (<http://taximoment.ru/>)
+## Taxi Moment
+
+<http://taximoment.ru/>
 
 This was a project of my former colleague, who asked me to help him with
 Android application for booking taxi cabs in Moscow.

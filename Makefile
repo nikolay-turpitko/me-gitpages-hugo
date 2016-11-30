@@ -31,14 +31,16 @@ tools:
 prefix="Nikolay_Turpitko_Software_Developer_Golang"
 
 generate:
-	@echo "Generate static content"
+	@echo "Generate static content..."
 	@mkdir -p ./about-me/static/doc
+	@echo "*_CV.md"
 	@sed -e '/^+++$$/,/^+++$$/d' \
 		 -e '/./,$$!d' \
 		 -e "s/{{% updated %}}/$$(date -I)/" \
 		 ./about-me/content/full\ cv/index.md | \
 		./tools/bin/decryptemail | \
 		cat -s > ./about-me/static/doc/$(prefix)_CV.md
+	@echo "*_CV.pdf..."
 	@pandoc -s -S \
 		-f markdown \
 		-V documentclass="paper" \
@@ -51,6 +53,7 @@ generate:
 		-H ./templ/cv-header.inc \
 		-o ./about-me/static/doc/$(prefix)_CV.pdf \
 		./about-me/static/doc/$(prefix)_CV.md
+	@echo "*_Recent_Projects.md..."
 	@grep ./about-me/content/recent\ projects/* -PH -e '^weight\s*=\s*\d+$$' | \
 		sort -k 4b | \
 		cut -d: -f1 | \
@@ -60,6 +63,7 @@ generate:
 		  -e '$$s/$$/\n/' \
 		  -s '{}' | \
 		cat -s > ./about-me/static/doc/$(prefix)_Recent_Projects.md
+	@echo "*_Recent_Projects.pdf..."
 	@pandoc -s -S \
 		-f markdown \
 		-V documentclass="paper" \
@@ -72,6 +76,7 @@ generate:
 		-V author-meta="Nikolay Turpitko" \
 		-o ./about-me/static/doc/$(prefix)_Recent_Projects.pdf \
 		./about-me/static/doc/$(prefix)_Recent_Projects.md
+	@echo "Archiving..."
 	@find ./about-me/static ! -path "**/cert/**" -name "*.pdf" -or -name "*.md" | \
 		tar --transform 's:^.*/::' \
 		-cvzf ./about-me/static/$(prefix).tar.gz \
