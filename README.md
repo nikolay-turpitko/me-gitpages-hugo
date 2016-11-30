@@ -12,8 +12,9 @@ Sources for Hugo to generate website about me https://nikolay-turpitko.github.io
 - http://rcoedo.com/post/hugo-static-site-generator/
 - http://www.curtismlarson.com/blog/2015/04/12/github-pages-google-domains/
 - https://help.github.com/articles/setting-up-a-custom-subdomain/
+- https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/
 
-## Create key
+## Create key for Travis
 
 ```
 ssh-keygen -t rsa -b 4096 -C "<github-username>"

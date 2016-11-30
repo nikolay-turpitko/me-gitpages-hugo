@@ -25,7 +25,7 @@
 
 12/2014 -- Present
 
-:   __Let's Rock Today!, Moscow/Barnaul (<http://www.letsrock.today>)__  
+:   __Let's Rock Today!, Moscow/Barnaul (<https://www.letsrock.today>)__  
     __Software Developer and Architect__  
     _Hybrid (web/Android) application for search, browse and subscribe to
      entertainment events (not quite like seatgeak.com)_  

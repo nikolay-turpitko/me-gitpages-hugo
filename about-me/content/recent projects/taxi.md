@@ -6,13 +6,19 @@ weight = 4
 
 ## Taxi Moment (<http://taximoment.ru/>)
 
-This was a project of my former colleague, who asked me to help him with Android
-application for booking taxi cabs in Moscow.
+This was a project of my former colleague, who asked me to help him with
+Android application for booking taxi cabs in Moscow.
 
-Client app implemented with Apache Cordova and Dojo.
-One back-end service implemented on Go and deployed on Google App Engine.
+I implemented:
+
+- [web/mobile app for booking taxi cabs](#web-android-ios-app-with-apache-cordova-jquery-and-dojo),
+- [back-end service for this web/mobile app](#server-module-for-client-auth-and-update-order-status-go-google-app-engine),
+- prototype of mobile app for drivers (didn't make it into production).
 
 ### Web/Android/iOS app with Apache Cordova, jQuery and Dojo
+
+Here is how it looks [in the browser](http://taximoment.ru/mobile/?lang=ru&theme=Custom&sprut-url=http://momenttaxi1.appspot.com)
+and [at the Google Play](https://play.google.com/store/apps/details?id=ru.taximoment.cab).
 
 We decided to implement it using relatively new (at that time) HTML5 and
 [Apache Cordova](https://cordova.apache.org/).  This way we hoped to use the
