@@ -4,20 +4,21 @@ weight = 4
 
 +++
 
-## Taxi Moment
-
 <http://taximoment.ru/>
 
-This was a project of my former colleague, who asked me to help him with
+Sources are in the private repository.
+
+This was a project of [my former colleague](https://ua.linkedin.com/in/alexander-larionov-61536764/en), who asked me to help him with
 Android application for booking taxi cabs in Moscow.
 
 I implemented:
 
-- web/mobile app for booking taxi cabs,
+- web/mobile app for booking taxi cabs (not the whole website above, only part
+  for user to book a cab),
 - back-end service for this web/mobile app,
 - prototype of mobile app for drivers (didn't make it into production).
 
-### Web/Android/iOS app with Apache Cordova, jQuery and Dojo
+## Web/Android/iOS app with Apache Cordova, jQuery and Dojo
 
 Here is how it looks [in the browser](http://taximoment.ru/mobile/?lang=ru&theme=Custom&sprut-url=http://momenttaxi1.appspot.com)
 and [at the Google Play](https://play.google.com/store/apps/details?id=ru.taximoment.cab).
@@ -88,7 +89,7 @@ created by me, but I helped to fix several issues in it). When Google dropped
 GWT support and changed maps or geo API, we was in unpleasant situation.
 
 
-### Server module for client auth, and update order status (Go, Google App Engine)
+## Server module for client auth, and update order status (Go, Google App Engine)
 
 This part was fun. When I almost finished client app's, I needed to add simple
 login into app, so that returned user could check status of his/her order(s)

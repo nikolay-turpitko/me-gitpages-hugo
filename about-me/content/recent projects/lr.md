@@ -1,10 +1,22 @@
 +++
 title = "Let's Rock!"
-weight = 1
+weight = 2
 
 +++
 
-## Let's Rock!
+<https://letsrock.today>
+
+[At the Google Play](https://play.google.com/store/apps/details?id=today.letsrock.client)
+
+Sources are in the private repository. We hope to open it some day, but right
+now we are ashamed to do this. May show some parts as a code sample by request.
+The whole repository contains some sensitive parts. We started to open authentication
+code from it, see [authkit](https://github.com/letsrock-today/authkit).
+
+
+---
+
+##TODO
 
 - Web app (riot.js).
 - Android app.
@@ -63,3 +75,4 @@ I participated in the web frontend developement as well, which is also
 mainly created during pair programming sessions. We used Riot.js and
 webpack for that. My solo work here is porting of golang's heap data
 structure and implementation of caching fetch above it.
+

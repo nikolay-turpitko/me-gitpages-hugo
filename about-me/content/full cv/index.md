@@ -5,7 +5,7 @@
 
 [[my-name]@[my-surname].com](mailto:avxbynl[at]ghecvgxb[dot]pbz) |
 [+79267904397](tel:+79267904397) |
-<http://www.nikolay.turpitko.com>
+<https://nikolay.turpitko.com>
 
 ### SUMMARY
 
@@ -32,13 +32,13 @@
     `Go, CentOS, RPM, SystemD, Nginx, Redis, Ledis, LevelDB, bash, Docker,
      Vagrant, Packer, Java (Android), Javascript, Riot.js`
 
-    Along with colleague of mine created:
+    Along with colleague of mine during remote pair programming sessions created:
 
     - back-end server on Go (several separate services behind Nginx in
       reverse-proxy mode with Sphinx search engine),
     - build automation with make, bash, Docker, Vagrant and Packer,
-    - Android application,
-    - web application on JavaScript (using Riot.js framework),
+    - native Android application,
+    - HTML5/JavaScript application - mobile/desktop web site (using Riot.js framework),
     - 3-legged OAuth2 implementation at server, web and Android apps (recently
       we started to extract this part into separate open-source project on Github).
 
@@ -49,7 +49,7 @@
     _Web and Android app to book a taxi cab in Moscow_  
     `JavaScript, jQuery, Dojo, Apache Cordova, Java, Go, Google App Engine`
 
-    In parallel with my permanent emplpyment in UBS (via Manpower), I periodically
+    In parallel with my permanent emplpyment in UBS/Manpower, I periodically
     participated in the side project as a freelancer. Developed web and Android
     app, based on Apache Cordova for taxi ordering. Initially we deployed it
     in the web, Google Play and Apple AppStore, but later decided to drop support

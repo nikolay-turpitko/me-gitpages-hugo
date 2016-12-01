@@ -57,10 +57,9 @@ generate:
 	@grep ./about-me/content/recent\ projects/* -PH -e '^weight\s*=\s*\d+$$' | \
 		sort -k 4b | \
 		cut -d: -f1 | \
-		xargs -r -I'{}' sed \
-		  -e '/^+++$$/,/^+++$$/d' \
-		  -e '/./,$$!d' \
-		  -e '$$s/$$/\n/' \
+		xargs -r -I'{}' sed -r \
+		  -e '/^\+\+\+$$/,/^\+\+\+$$/ {s/title\s*=\s*"(.*)"/# \1/p;d}' \
+		  -e '$$s/$$/\n\\pagebreak\n/' \
 		  -s '{}' | \
 		cat -s > ./about-me/static/doc/$(prefix)_Recent_Projects.md
 	@echo "*_Recent_Projects.pdf..."

@@ -9,7 +9,7 @@ weight = 1
 
 TODO: About me
 
-[web site](http://www.nikolay.turpitko.com)
+[web site](https://nikolay.turpitko.com)
 ([alias](https://nikolay-turpitko.github.io)) |
 [LinkedIn profile](http://www.linkedin.com/in/nikolayturpitko) |
 [GitHub profile](https://github.com/nikolay-turpitko)
