@@ -25,6 +25,8 @@ But you can guess it.
     <button type="submit">Send email</button>
 </form>
 
+[Freenode IRC](irc://irc.freenode.net): nikolay-turpitko
+
 [Hangouts chat](https://hangouts.google.com/chat/person/118256930792891720434)
 
 <script src="https://apis.google.com/js/platform.js" async defer></script>

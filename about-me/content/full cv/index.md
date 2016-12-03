@@ -1,7 +1,7 @@
 
 # NIKOLAY TURPITKO
 
-## Golang Software Developer, Independent Contractor
+## Software Developer, Freelancer
 
 [[my-name]@[my-surname].com](mailto:avxbynl[at]ghecvgxb[dot]pbz) |
 [+79267904397](tel:+79267904397) |

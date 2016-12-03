@@ -1,3 +1,4 @@
+% creates extra space between label and definition (dates and job description in CV)
 \renewcommand\descriptionlabel[1]{
   \hspace\labelsep {
     \advance\linewidth\leftmargin

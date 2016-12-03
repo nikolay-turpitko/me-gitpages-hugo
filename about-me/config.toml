@@ -1,6 +1,6 @@
 baseurl = "https://nikolay-turpitko.github.io/"
 languageCode = "en-us"
-title = "Nikolay Turpitko, Software Developer"
+title = "Nikolay Turpitko, Software Developer, Freelancer"
 
 theme = "after-dark"
 paginate = 5

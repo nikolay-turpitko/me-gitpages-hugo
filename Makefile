@@ -59,7 +59,7 @@ generate:
 		cut -d: -f1 | \
 		xargs -r -I'{}' sed -r \
 		  -e '/^\+\+\+$$/,/^\+\+\+$$/ {s/title\s*=\s*"(.*)"/# \1/p;d}' \
-		  -e '$$s/$$/\n\\pagebreak\n/' \
+		  -e '$$s/$$/\n---\n/' \
 		  -s '{}' | \
 		cat -s > ./about-me/static/doc/$(prefix)_Recent_Projects.md
 	@echo "*_Recent_Projects.pdf..."
@@ -71,8 +71,10 @@ generate:
 		-V fontsize="10pt" \
 		-V colorlinks=true \
 		-V links-as-notes=true \
-		-V title-meta="Recent projects" \
+		-V title-meta="Recent projects description" \
 		-V author-meta="Nikolay Turpitko" \
+		-V title="Recent projects description" \
+		-V author="Nikolay Turpitko, Software Developer, Freelancer" \
 		-o ./about-me/static/doc/$(prefix)_Recent_Projects.pdf \
 		./about-me/static/doc/$(prefix)_Recent_Projects.md
 	@echo "Archiving..."
