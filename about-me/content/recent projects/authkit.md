@@ -21,9 +21,9 @@ created using Go, `"golang.org/x/oauth2"` and `"github.com/dgrijalva/jwt-go"`.
 But, retrospecting it, we found, that we created more custom code than it deem
 to be necessary and it is a bit entangled.
 
-Though, it seems that we have a couple of useful pieces of code, which we would
+However, it seems that we have a couple of useful pieces of code, which we would
 be glad to reuse in our future projects,  and something might be even useful
-for other developers.  Of course, we'd benefit if someone start to use our code
+for other developers.  Of course, we'd benefit if someone starts to use our code
 and contribute to it. So, we decided to publish it on Github under MIT license.
 
 We have not finished to re-implement all the parts, we already had in LR, yet.

@@ -38,7 +38,7 @@
       reverse-proxy mode with Sphinx search engine),
     - build automation with make, bash, Docker, Vagrant and Packer,
     - native Android application,
-    - HTML5/JavaScript application - mobile/desktop web site (using Riot.js framework),
+    - HTML5/JavaScript application - mobile/desktop website (using Riot.js framework),
     - 3-legged OAuth2 implementation at server, web and Android apps (recently
       we started to extract this part into separate open-source project on Github).
 

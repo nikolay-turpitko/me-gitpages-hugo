@@ -25,7 +25,7 @@ and [at the Google Play](https://play.google.com/store/apps/details?id=ru.taximo
 
 We decided to implement it using relatively new (at that time) HTML5 and
 [Apache Cordova](https://cordova.apache.org/).  This way we hoped to use the
-same HTML and JavaScript code for web application (deployed on web site) as
+same HTML and JavaScript code for web application (deployed on website) as
 well as for the Android and iOS apps.
 
 Initially I tried to develop it as a single-page
@@ -43,13 +43,13 @@ and offered a compiler, which optimized, minified and packaged only reachable
 JavaScript code (there are plenty of alternatives nowadays).
 
 Reimplemented with Dojo, application became significantly lighter, it stopped
-to crash on Motorola every now and then. But I was still disappointed at Apache
-Cordova performance and development clumsiness. Don't know, if it become better
+to crash on Motorola now and then. But I was still disappointed at Apache
+Cordova performance and development clumsiness. Don't know, if it's became better
 since then, but I decided __never touch Apache Cordova (or similar products) again__.
 
 It turns out, that we spent more time patching and plumbing our app, making the
 same codebase to work at completely different environments, then we, probably,
-would spent, developing native versions for every platform. For such a small
+would spend, developing native versions for every platform. For such a small
 and simple app it does not worth it. And for bigger app, I suspect, the amount
 of differences is much bigger, so plumbing will take even more efforts.
 
@@ -63,7 +63,7 @@ same for different platforms, we had to support not only "common" JavaScript
 code, but also native plugins.  And moreover, user experience was not the same
 as with native apps. I was not able to explain to every Android and iOS user
 why UI is so ugly and different from native. Why, looking almost as native (but
-for obsolete phone versions), it behave differently in some unexpected ways.
+for obsolete phone versions), it behaves differently in some unexpected ways.
 
 Nevertheless, application was created, and used to work on both iOS and
 Android.  We stopped to develop it due shortage of funds from business side,
@@ -78,13 +78,13 @@ our business customers.
 Besides Apache Cordova, jQuery and Dojo, I had a somewhat bitter experience
 with Google Maps and Geolocation API. It worked. We used it to show booked
 route on the map, to estimate price, to self-check by the user that he/she
-entered a correct addresses. Most of times it worked well. But there were
+entered correct addresses. Most of the times it worked well. But there were
 errors, when it found entirely different geo-position for address, provided by
 user.  User was disappointed. We could do nothing, that's how Google parsed
 entered address, probably, because correct address was not in their database.
 We could not solve this at our side. Human operator during phone call usually
 corrects this issues, but blames us at the same time. Another issue with Google
-APIs is that Google likes to drop it's products. We used GWT in admin's web app
+APIs is that Google likes to drop its products. We used GWT in admin's web app
 (it was not created by me, but I helped to fix several issues in it). When
 Google dropped GWT support and changed maps or geo API, we was in unpleasant
 situation.
@@ -98,7 +98,7 @@ service at server side. So, I decided to implement it on Go programming
 language.  Just for fun and to try it in some project. We already used Java on
 Google App Engine for the rest of the server app's logic. App Engine offered
 Java, Python and Go. I was fed up with Java and had some brief experience with
-Python, so I decided to try Go, and was charmed with it's simplicity, clarity
+Python, so I decided to try Go, and was charmed with its simplicity, clarity
 and performance. I mean not execution performance. All we know, that Java is
 pretty performant when it is wormed-up. But I mean development performance in
 the write-compile-execute loop.  How fast it compiled and started to work. I
@@ -111,7 +111,7 @@ his/her social account (Facebook, Google, Twitter) and simply check next time
 that it is the same user. I used "code.google.com/p/goauth2/oauth" for this (and
 "github.com/mrjones/oauth" for Twitter).
 
-As one of the options besides social login, application allows to login using
+As one of the options besides social login, application allows entering app using
 phone number and one-time generated pin code sent via SMS. I connected app to
 Twillio and SMSAero providers for this task.
 

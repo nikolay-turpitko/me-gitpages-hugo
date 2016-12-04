@@ -54,11 +54,11 @@ download files from ftp, `find` and `sort`  to prepare lists of files to
 process, `tar` to archive, `iconv` to convert encoding, `sed` and `column` to
 prepare simple reports, `mutt` to send emails, etc.
 
-We used `yaml` configuration files and allowed to put `bash` scriptlets within
+We used `yaml` configuration files and allowed putting `bash` scriptlets within
 it. Tool would populate environment from configuration and current application
 state and execute bash scriplets for particular sub-task. This way we allowed
 system administrator to use familiar tool to extend application.  Solution is
-flexible enough, it allows to execute arbitrary script or program for the task.
+flexible enough, it allows executing arbitrary script or program for the task.
 If standard Linux utilities won't be enough, it's possible to create script on
 `awk` or any scripting language, or even to execute binary program, created for
 the task later. Solution is safe enough (through right file permissions and
@@ -72,13 +72,13 @@ and live till the whole calculation is done. Every process reads calculation
 tasks from `stdin` and returns individual results to `stdout` (we used simple
 custom binary protocol based on `msgpack`). Go program than send results via
 channel to the next stage (post-processing), where individual results are
-accumulated and than similar approach used to concurrently execute
+accumulated and then similar approach used to concurrently execute
 post-processors (which again could be an external scripts).
 
 We used `"go/types".Eval()` to dynamically execute conditional expressions,
-which can be stored in the configuration file in Go syntax. This expressions
-are evaluated over fields of report and allow to filter data for reports and to
-change alerting conditions without re-compilation of the whole program.
+which can be stored in the configuration file in Go syntax. These expressions
+are evaluated over fields of report and allow filtering data for reports and 
+changing of alerting conditions without re-compilation of the whole program.
 
 We created prototype and demonstrated ability to execute more complex external
 algorithms (in different execution environment), using provided extension
@@ -96,14 +96,14 @@ degraded considerably.  R-SSA with large "window" ate all CPU cycles (and with
 short "window" it gave unreliable predictions). Calculations could be done on
 real Core i7 notebook, but were unacceptably sluggish on the provided 1-CPU
 virtual machine. We stopped experiments due restrictions of time and budged.
-Though, potentially we would squeeze more interesting results with a proper
-setup, I think (it would be interesting to execute math-expensive calculation
-on the simple cluster of 3-5 dedicated R nodes, or try to develop our own SSA
+Still, I think potentially we would squeeze more interesting results with a
+proper setup (it would be interesting to execute math-expensive calculation on
+the simple cluster of 3-5 dedicated R nodes, or try to develop our own SSA
 implementation on compiled language). Nevertheless, I think, we gave a good
 tool to the customer's engineers.  They can experiment, explore and extend it
 as they need.
 
-We used systemd to setup periodical execution of our alerting service, to 
+We used systemd to set up periodical execution of our alerting service, to 
 start web service on startup and to implement error monitoring. Error monitoring
 tool was a simple script, which is periodically executed by systemd. It simply
 executes journalctl to find service's errors in the system journal for the last

@@ -17,11 +17,11 @@ all that stuff, which we were discouraged to use during years of the work in
 the Java/enterprise environment.
 
 This is an ongoing project, it is neither completely finished nor abandoned.
-We doing it in our spare time, and it is not fully functional yet.
+We are doing it in our spare time, and it is not fully functional yet.
 
 Sources are in the private repository. We hope to open it some day, but right
 now we are ashamed to do this. I may show some parts as a code sample by request.
-But the whole repository contains some sensitive parts. Though, we started to
+But the whole repository contains some sensitive parts. However, we started to
 extract authentication code from this project into open-source one, see
 [authkit](../authkit).
 
@@ -32,7 +32,7 @@ well as additional features, like push notifications about new events,
 conforming user-defined criteria. We also planned some social aspects, but
 haven't implemented these ideas yet. Another planned, but not implemented yet
 feature is to enrich information about events from the public media (Youtube,
-Wikipedia, etc). So, basically, our app is an aggregator. But we trying to
+Wikipedia, etc). So, basically, our app is an aggregator. But we are trying to
 provide some additional services to the end user, and not pretend to be a
 reseller. We do not (and not going to) sell anything within our app, we forward
 traffic back to the partner site (with referral code, of course). This model is
@@ -49,7 +49,7 @@ So far we created:
 
 We use Go-based services (we call them "modules") behind the
 [Nginx](https://nginx.org/en/) server, working in the reverse proxy mode. Each
-service focused on one task, has it's own database and API.  Architecture is
+service focused on one task, has its own database and API.  Architecture is
 not strictly "micro-service", though, because services are relatively
 coarse-grained and, moreover, we allowed them to share databases in some cases.
 For example, we have services which populates data into the DB, and others that
@@ -63,13 +63,13 @@ frequently used objects (because Redis stores everything in RAM), LedisDB - for
 all other things (which are stored mostly on HDD, but with
 [mmap](https://en.wikipedia.org/wiki/Memory-mapped_file) for faster read
 access), and Sphinx stores indexes mostly. Each service has several logical
-connections (we call them "data sources") to the database it needs. We are
-striving to logically separate data sources, though currently they may reside
+connections (we call them "data sources") to the databases it needs. We are
+striving to logically separate data sources, though, currently they may reside
 within the same DB instance, and some services may use the same logical data
 source by necessity.
 
 We think, that with the current architecture we are well prepared to scale, if
-necessary. Actually, we haven't prove this in practice yet. Currently we deploy
+necessary. Actually, we haven't proved this in practice yet. Currently we deploy
 all the components onto the single virtual host with unix-socket connections
 between them. But, theoretically, we can deploy Nginx, (multiple instances of)
 every service and database (cluster) onto the separate nodes, using Nginx as a
@@ -79,7 +79,7 @@ We performed some stress tests on our current setup and monitored CPU, RAM and
 HDD consumption growth and estimated, that we can grow up to 10K simultaneous
 connections with only VDS hosting tariff plan upgrades, after that we have an
 option to deploy databases onto separate nodes, which can give us some time to
-prepare for the farther traffic growth. Though, it's all pure theoretical,
+prepare for the farther traffic growth. Still, it's all pure theoretical,
 actually we'd be quite happy to become popular enought to have a small
 "slashdot effect".
 
@@ -89,9 +89,9 @@ service deployed as a separate [RPM package](http://rpm.org/) (we use [CentOS
 Linux](https://www.centos.org/) in production).  Currently, to simplify
 deployment and version control, we use single super-package, containing only
 common initialization scripts and dependencies onto other app's packages.
-Though, we can deploy packages independently almost without interruption.
+However, we can deploy packages independently almost without interruption.
 Services are completely stateless, behind the load balancer and we use graceful
-shutdown to minimize active connections loss.
+shutdown to minimize loss of active connections.
 
 We use [systemd](https://www.freedesktop.org/wiki/Software/systemd/) to manage
 our services. It capable to detect if processes are stuck or dead and restart
@@ -135,7 +135,7 @@ point, just don't need them yet.
 ## Native Android app
 
 For this project we decided to use native Android app. I have had awful
-experience with HTML5 / Apache Cordova app in [Taxi project](../taxi).
+experiences with HTML5 / Apache Cordova app in [Taxi project](../taxi).
 
 In our Android application we used following libraries:
 
