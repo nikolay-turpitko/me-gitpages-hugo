@@ -51,7 +51,7 @@ ignoreFiles = [ "README\\.md$" ]
      identifier = "downloads"
      url = "/downloads/"
    [[menu.main]]
-     name = "Public Agreement"
+     name = "Offer"
      weight = 3
-     identifier = "public-agreement"
-     url = "/public-agreement/"
+     identifier = "offer"
+     url = "/offer/"
