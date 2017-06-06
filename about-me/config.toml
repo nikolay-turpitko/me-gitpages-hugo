@@ -50,8 +50,3 @@ ignoreFiles = [ "README\\.md$" ]
      weight = 3
      identifier = "downloads"
      url = "/downloads/"
-   [[menu.main]]
-     name = "Offer"
-     weight = 3
-     identifier = "offer"
-     url = "/offer/"
