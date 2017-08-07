@@ -10,8 +10,6 @@ JavaScript is required to decode email link below (anti-spam measure).
 But you can guess it.
 </noscript>
 
-[[my-name]@[my-surname].com](mailto:avxbynl[at]ghecvgxb[dot]pbz)
-
 <form method="POST"
       action="https://formspree.io/avxbynl[at]ghecvgxb[dot]pbz"
       class="jsonly"
@@ -25,10 +23,6 @@ But you can guess it.
     <button type="submit">Send email</button>
 </form>
 
-[Freenode IRC](irc://irc.freenode.net): nikolay-turpitko
-
-[Hangouts chat](https://hangouts.google.com/chat/person/118256930792891720434)
-
 <script src="https://apis.google.com/js/platform.js" async defer></script>
 <div class="jsonly" style="display: none">
     <g:hangout
@@ -37,6 +31,14 @@ But you can guess it.
     </g:hangout>
 </div>
 
+{{< sipnet >}}
+
+[[my-name]@[my-surname].com](mailto:avxbynl[at]ghecvgxb[dot]pbz) |
+[hangouts chat](https://hangouts.google.com/chat/person/118256930792891720434) |
+[telegram: @nikolay_turpitko](https://t.me/nikolay_turpitko)
+
 [skype: nikolay.turpitko](skype:nikolay.turpitko?call) |
+[Freenode IRC](irc://irc.freenode.net): nikolay-turpitko
+
 [sip: 2593115@sipnet.ru](sip:2593115@sipnet.ru) |
 [tel: +79267904397](tel:+79267904397)
