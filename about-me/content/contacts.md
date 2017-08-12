@@ -12,8 +12,8 @@ weight = 2
     <input type="hidden" name="_subject" value="[nikolay.turpitko.com]" />
     <input type="hidden" name="_format" value="plain" />
     <input type="text" name="_gotcha" style="display:none" />
-    <input type="text" name="name" placeholder="Your name">
-    <input type="email" name="email" placeholder="Your email">
+    <input type="text" name="name" placeholder="Your name or nickname (optional)">
+    <input type="email" name="email" placeholder="Your email or other contact info (optional)">
     <textarea name="message" placeholder="Your message"></textarea>
     <button type="submit">Send email</button>
     <a href="https://formspree.io/">via https://formspree.io/</a>
