@@ -5,11 +5,6 @@ weight = 2
 
 +++
 
-<noscript>
-JavaScript is required to decode email link below (anti-spam measure).
-But you can guess it.
-</noscript>
-
 <form method="POST"
       action="https://formspree.io/avxbynl[at]ghecvgxb[dot]pbz"
       class="jsonly"
@@ -21,17 +16,15 @@ But you can guess it.
     <input type="email" name="email" placeholder="Your email">
     <textarea name="message" placeholder="Your message"></textarea>
     <button type="submit">Send email</button>
+    <a href="https://formspree.io/">via https://formspree.io/</a>
 </form>
 
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<div class="jsonly" style="display: none">
-    <g:hangout
-        render="createhangout"
-        invites="[{id:'118256930792891720434', invite_type:'PROFILE'}]">
-    </g:hangout>
-</div>
+{{< sipnet >}} {{< hangouts >}}
 
-{{< sipnet >}}
+<noscript>
+JavaScript is required to decode email link below (anti-spam measure).
+But you can guess it.
+</noscript>
 
 [[my-name]@[my-surname].com](mailto:avxbynl[at]ghecvgxb[dot]pbz) |
 [hangouts chat](https://hangouts.google.com/chat/person/118256930792891720434) |
@@ -42,3 +35,32 @@ But you can guess it.
 
 [sip: 2593115@sipnet.ru](sip:2593115@sipnet.ru) |
 [tel: +79267904397](tel:+79267904397)
+
+**Privacy disclaimer:**
+
+I do not need any of your personal information, do not request for it and do
+not collect it.
+
+This website does not use cookies and does not require JavaScript (which is
+used, though, if enabled in the web browser, to implement call-back form and
+buttons).
+
+If you are concerned about your privacy, you may use a nickname instead of your
+real name as well as a temporary contact information.  I will use this
+information only to contact you back and will not share it with third parties
+without your permission (except situations of law enforcement requests,
+properly issued by Russian authorities).
+
+You are free to choose any way of communication you deem as more private.
+
+Please notice, that any information your enter in web forms or applications can
+be available not only to addressee, but also to the provider of the web form or
+application (such as Google, Telegram, Skype, Formspree, etc) as well as to
+internet service providers, and can be subject of man-in-the-middle attacks. I
+can not guarantee that any communication channel I use is free from leaks.
+
+Take into consideration privacy policies of the service provider of your
+choice.
+
+This disclaimer was added due recent lawsuits against call-back form owners in
+Russian Federation.
