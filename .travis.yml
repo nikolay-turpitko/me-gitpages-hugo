@@ -11,8 +11,8 @@ before_install:
         texlive-fonts-recommended
         texlive-xetex
         pandoc
-    - wget https://github.com/spf13/hugo/releases/download/v0.17/hugo_0.17-64bit.deb
-    - sudo dpkg -i hugo_0.17-64bit.deb
+        nim
+        hugo
     - openssl aes-256-cbc
         -K $encrypted_97c4de2fd153_key
         -iv $encrypted_97c4de2fd153_iv
@@ -20,30 +20,3 @@ before_install:
         -out id_rsa_travis -d
     - chmod 600 id_rsa_travis
     - eval "$(ssh-agent -s)" && ssh-add id_rsa_travis
-    - |
-      if [ ! -x nim-$BRANCH/bin/nim ]; then
-        git clone -b $BRANCH --depth 1 git://github.com/nim-lang/nim nim-$BRANCH/
-        cd nim-$BRANCH
-        sh build_all.sh
-        git clone -b $BRANCH --depth 1 git://github.com/nim-lang/csources csources/
-        cd csources
-        sh build.sh
-        cd ..
-        rm -rf csources
-        bin/nim c koch
-        ./koch boot -d:release
-        ./koch tools
-      else
-        cd nim-$BRANCH
-        git fetch origin
-        if ! git merge FETCH_HEAD | grep "Already up-to-date"; then
-          bin/nim c koch
-          ./koch boot -d:release
-          ./koch tools
-        fi
-      fi
-      cd ..
-script: export PATH="$PWD/nim-$BRANCH/bin${PATH:+:$PATH}" && make
-cache:
-    directories:
-        - nim-master
