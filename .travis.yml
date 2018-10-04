@@ -24,6 +24,7 @@ before_install:
       if [ ! -x nim-$BRANCH/bin/nim ]; then
         git clone -b $BRANCH --depth 1 git://github.com/nim-lang/nim nim-$BRANCH/
         cd nim-$BRANCH
+        sh build_all.sh
         git clone -b $BRANCH --depth 1 git://github.com/nim-lang/csources csources/
         cd csources
         sh build.sh
@@ -31,12 +32,14 @@ before_install:
         rm -rf csources
         bin/nim c koch
         ./koch boot -d:release
+        ./koch tools
       else
         cd nim-$BRANCH
         git fetch origin
         if ! git merge FETCH_HEAD | grep "Already up-to-date"; then
           bin/nim c koch
           ./koch boot -d:release
+          ./koch tools
         fi
       fi
       cd ..
