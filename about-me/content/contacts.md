@@ -34,7 +34,7 @@ But you can guess it.
 [Freenode IRC](irc://irc.freenode.net): nikolay-turpitko
 
 [sip: 2593115@sipnet.ru](sip:2593115@sipnet.ru) |
-[tel: +79267904397](tel:+79267904397)
+[tel: +79236479236](tel:+79236479236)
 
 **Privacy disclaimer:**
 
