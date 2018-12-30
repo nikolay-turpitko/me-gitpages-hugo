@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nikolay-turpitko/me-gitpages-hugo.svg?branch=master)](https://travis-ci.org/nikolay-turpitko/me-gitpages-hugo)
+[![Build Status](https://travis-ci.com/nikolay-turpitko/me-gitpages-hugo.svg?branch=master)](https://travis-ci.com/nikolay-turpitko/me-gitpages-hugo)
 
 # me-gitpages-hugo
 
